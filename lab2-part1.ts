@@ -28,13 +28,7 @@ class CheckingsAccount {
 
     withdraw(withdrawAmount:number) :number{
         this.withdrawAmount = withdrawAmount;
-        this.balance += this.withdrawAmount
+        this.balance -= this.withdrawAmount
         return this.balance;
     };
 };
-
-let bank:CheckingsAccount = new CheckingsAccount(200,'Ashlyn');
-bank.deposit(50);
-console.log(bank);
-bank.withdraw(25);
-console.log(bank);
